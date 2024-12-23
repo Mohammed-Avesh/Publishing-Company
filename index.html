@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        .sidepanel {
+            height: 0px;
+            /* Specify a height */
+            width: 100%;
+            /* 0 width - change this with JavaScript */
+            /* Stay in place */
+            z-index: 1;
+            /* Stay on top */
+            background-color: #111;
+            /* Black*/
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            /* Place content 60px from the top */
+            transition: height 0.5s;
+            /* 0.5 second transition effect to slide in the sidepanel */
+        }
+
+        /* The sidepanel links */
+        .sidepanel a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            border-bottom: 1px solid #818181;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidepanel a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Style the button that is used to open the sidepanel */
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar flex  px-8 md:px-16 py-12">
+        <div class="flex flex-col md:flex-row w-[-webkit-fill-available] justify-between">
+            <div class="icon flex mt-5 gap-2 m-auto md:m-0 order-1 md:order-none">
+                <img class="w-10 h-10" src="./image/facebook.png" alt="">
+                <img class="w-10 h-10" src="./image/twitter.png" alt="">
+                <img class="w-10 h-10 p-2 border border-[#e6e6e6] rounded-2xl" src="./image/intagram.png" alt="">
+                <img class="w-10 h-10 p-2 border border-[#e6e6e6] rounded-3xl" src="./image/globe.png" alt="">
+            </div>
+
+            <div class="flex flex-col m-auto md:flex">
+                <marquee>
+                    <h1 class="font-bold text-[20px] md:text-xl ">PUBLISHING<span
+                            class="text-[#ff7a5c] font-bold text-xl mx-1">COMPANY</span></h1>
+                    <p class="text-gray-300 font-normal tracking-[2px] text-[13px] ">BOOK PUBLISHING COMPANY</p>
+                </marquee>
+            </div>
+
+            <div class="relative w-[340px] md:w-[270px] mt-6 md:mt-0">
+                <input class="h-[45px] pl-3  rounded-full w-[340px] md:w-[270px] "
+                    style="background-color: rgba(0, 0, 0, 0.03);" type="text" placeholder="Search">
+                <button
+                    class="absolute flex items-center justify-center  right-0 top-0  bg-[#95adbe] rounded-tr-[20px] rounded-br-[20px] h-[45px] w-[40px]">
+                    <img class="w-[15px]" src="./image/search.png" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <nav class="md:flex hidden ">
+            <ul class="flex gap-10 m-auto my-7 font-normal">
+                <li class="hover:text-[#95adbe] hover:underline underline-offset-[32px]"><a href="#intro_slider">Introslider</a></li>
+                <li class="hover:text-[#95adbe] hover:underline underline-offset-[32px]"><a href="#categories">Categories</a></li>
+                <li class="hover:text-[#95adbe] hover:underline underline-offset-[32px]"><a href="#countup">CountUp</a></li>
+                <li class="hover:text-[#95adbe] hover:underline underline-offset-[32px]"><a href="#authors">Authors</a></li>
+                <li class="hover:text-[#95adbe] hover:underline underline-offset-[32px]"><a href="#new_release">New release</a></li>
+                <li class="hover:text-[#95adbe] hover:underline underline-offset-[32px]"><a href="#testimonial">Testimonial</a></li>
+                <li class="hover:text-[#95adbe] hover:underline underline-offset-[32px]"><a href="#blog">BLOG</a></li>
+                <li class="hover:text-[#95adbe] hover:underline underline-offset-[32px  ]"><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+        <div class="md:hidden block bg-[#111]">
+            <button class="openbtn" style="color: rgba(255, 255, 255, .5);" onclick="openNav()">&#9776; MENU</button>
+            <div id="mySidepanel" class="sidepanel">
+                <a href="#intro_slider">Introslider</a>
+                <a href="#categories">Categories</a>
+                <a href="#countup">CountUp</a>
+                <a href="#authors">Authors</a>
+                <a href="#new_release">New release</a>
+                <a href="#testimonial">Testimonial</a>
+                <a href="#blog">BLOG</a>
+                <a href="#footer">Footer</a>
+            </div>
+        </div>
+    </div>
+    <div class="container contents " id="intro_slider">
+        <div class="image relative flex items-center  h-[700px]  bg-cover bg-[url('./image/background-img.webp')]">
+            <div class="max-w-[1020px]  px-3 md:px-0 w-full m-auto">
+                <h1 class="text-[42px] md:text-5xl md:max-w-[580px] font-semibold">Good books don't give up all their
+                    secrets at once</h1>
+                <p class="mt-6 text-[20px] md:text-[14px] font-semibold" style="color: rgba(0, 0, 0, 0.8);;">A small
+                    river named Dubed flows by their place and supplies it with the necessary regelialia.</p>
+                <div class="mt-7">
+                    <a class="bg-[#95adbe] p-3 text-white font-semibold rounded-md" href="">View All Books</a>
+                    <a class="bg-white p-3 font-semibold rounded-md" href="">Explore Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="categories" class="container flex flex-col md:flex-row w-full max-w-6xl justify-evenly m-auto ">
+        <div class="w-full mt-10  md:w-1/4 md:-mt-20 md:z-10">
+            <div
+                class="bg-[#f5f4f0] m-auto hover:bg-[#95adbe] flex items-center justify-center h-[170px] w-[170px] rounded-full">
+                <img class="flex items-center" src="./image/horsh.png" alt="">
+            </div>
+            <div class="text-center">
+                <h1 class="font-medium text-xl mt-2">Children's Book</h1>
+                <p class="text-gray-400 mt-2">A small river named Duden flows by their place and supplies it with the
+                    necessary
+                    regelialia.</p>
+            </div>
+        </div>
+        <div class="md:w-1/4 mt-5 w-full md:-mt-20 md:z-10">
+            <div
+                class="bg-[#f5f4f0] m-auto hover:bg-[#95adbe] flex items-center justify-center h-[170px] w-[170px] rounded-full">
+                <img class="flex items-center" src="./image/heart.png" alt="">
+            </div>
+            <div class="text-center">
+                <h1 class="font-medium text-xl mt-2">Romance</h1>
+                <p class="text-gray-400 mt-2">A small river named Duden flows by their place and supplies it with the
+                    necessary
+                    regelialia.</p>
+            </div>
+        </div>
+        <div class="md:w-1/4 mt-5 w-full md:-mt-20 md:z-10">
+            <div
+                class="bg-[#f5f4f0] m-auto hover:bg-[#95adbe] flex items-center justify-center h-[170px] w-[170px] rounded-full">
+                <img class="flex   items-center" src="./image/smart-house.png" alt="">
+            </div>
+            <div class="text-center">
+                <h1 class="font-medium text-xl mt-2">Art & Architecture</h1>
+                <p class="text-gray-400 mt-2">A small river named Duden flows by their place and supplies it with the
+                    necessary
+                    regelialia.</p>
+            </div>
+        </div>
+        <div class="md:w-1/4 mt-5 w-full md:-mt-20 md:z-10">
+            <div
+                class="bg-[#f5f4f0] m-auto hover:bg-[#95adbe] flex items-center justify-center h-[170px] w-[170px] rounded-full">
+                <img class="flex   items-center" src="./image/alarm-clock.png" alt="">
+            </div>
+            <div class="text-center">
+                <h1 class="font-medium text-xl mt-2">History</h1>
+                <p class="text-gray-400 mt-2">A small river named Duden flows by their place and supplies it with the
+                    necessary
+                    regelialia.</p>
+            </div>
+        </div>
+    </div>
+    <div id="countup" class="bg-[#f5f4f0] mt-36">
+        <div class="max-w-6xl flex flex-col md:flex-row m-auto py-12">
+            <div class="md:w-1/4 w-full text-center">
+                <h1 class="font-normal text-5xl">75,678</h1>
+                <p class="text-gray-400 mt-4">ACTIVE READERS</p>
+            </div>
+            <div class="mt-20 md:mt-0 md:w-1/4 w-full text-center">
+                <h1 class="font-normal text-5xl">3,040</h1>
+                <p class="text-gray-400 mt-4">TOTAL PAGES</p>
+            </div>
+            <div class="mt-20 md:mt-0 md:w-1/4 w-full text-center">
+                <h1 class="font-normal text-5xl">283</h1>
+                <p class="text-gray-400 mt-4">CUP OF COFFEE</p>
+            </div>
+            <div class="mt-20 md:mt-0 md:w-1/4 w-full text-center">
+                <h1 class="font-normal text-5xl">14,500</h1>
+                <p class="text-gray-400 mt-4">FACEBOOK FANS</p>
+            </div>
+        </div>
+    </div>
+    <div id="authors" class="section">
+        <div class="max-w-6xl flex m-auto mt-24">
+            <div class="w-1/2 hidden  md:block">
+                <img class="w-[570px] h-[570px]" src="./image/img.png" alt="">
+            </div>
+            <div class="py-12 mx-4 md:mx-0 md:px-12 w-full md:w-1/2">
+                <p class="text-red-400 font-serif">WELCOME TO PUBLISHING COMPANY</p>
+                <h1
+                    class="md:font-normal font-medium text-gray-500 md:text-black mb-6 leading-[3rem]  text-4xl md:text-5xl md:leading-[4rem]">
+                    Publishing Company Created By Authors</h1>
+                <p class="mb-6 text-[18px] md:text-[16px] font-bold md:font-semibold text-gray-400">A small river named
+                    Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic
+                    country, in which roasted parts of sentences fly into your mouth.</p>
+                <p class="md:font-semibold text-[18px] md:text-[16px] font-bold text-gray-400">On her way she met a
+                    copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a
+                    thousand times and everything that was left from its origin would be the word "and" and the Little
+                    Blind Text should turn around and return to its own, safe country.</p>
+                <div class="mt-6">
+                    <a class="bg-[#95adbe]  p-2 text-white font-medium rounded-md" href="">View All Our Authors</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="new_release" class="book-container px-4 md:px-0 mt-24">
+        <div class="max-w-6xl m-auto text-center">
+            <p class="text-red-400 font-sans md:text-lg text-xl">Books</p>
+            <h1 class="text-5xl mt-2 text-gray-600 font-medium">New Release</h1>
+        </div>
+        <div class="card gap-10 md:gap-0 mt-20 flex flex-col md:flex-row justify-around">
+            <div class="md:w-[31%] w-full flex flex-col md:flex-row bg-[#f5f4f0]">
+                <img class="md:w-[234px] w-full h-[320px]" src="./image/book-img.png" alt="">
+                <div class="px-7 py-7">
+                    <p class="text-red-400 font-semibold text-lg">$12.00</p>
+                    <h1 class="text-2xl font-normal mt-4 ">You Are Your Only Limit</h1>
+                    <p class="font-medium text-xl md:text-[17px] mt-4 text-gray-400">By John Nathan Muller</p>
+                </div>
+            </div>
+            <div class="md:w-[31%] w-full flex flex-col md:flex-row bg-[#f5f4f0]">
+                <img class="md:w-[234px] w-full h-[320px]" src="./image/book-img2.png" alt="">
+                <div class="px-7 py-7">
+                    <p class="text-gray-400 font-semibold text-lg">$12.00 <span class="text-red-400">$8.00</span></p>
+                    <h1 class="text-[28px] font-normal mt-4">101 Essays That Will Change The Way Your Thinks</h1>
+                    <p class="text-xl md:text-[17px] font-medium mt-4 text-gray-400">By John Nathan Muller</p>
+                </div>
+            </div>
+            <div class="md:w-[31%] w-full flex flex-col md:flex-row bg-[#f5f4f0]">
+                <img class="md:w-[234px] w-full h-[320px]" src="./image/book-img3.png" alt="">
+                <div class="px-7 py-7">
+                    <p class="text-red-400 font-semibold text-lg">$12.00</p>
+                    <h1 class="text-2xl font-normal mt-4">Your Soul Is A River</h1>
+                    <p class="font-medium text-xl md:text-[17px] mt-4 text-gray-400">By John Nathan Muller</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-second gap-10 md:gap-0 mt-8 flex flex-col md:flex-row justify-around">
+            <div class="md:w-[31%] w-full flex flex-col-reverse  md:flex-row  bg-[#f5f4f0]">
+                <div class="px-7 py-7 ">
+                    <p class="text-red-400 font-semibold text-lg">$9.00</p>
+                    <h1 class="text-3xl font-normal mt-4">All The Letters I Should Have Sent</h1>
+                    <p class="font-medium text-xl md:text-[17px] mt-4 text-gray-400">By John Nathan Muller</p>
+                </div>
+                <img class="md:w-[234px] w-full h-[320px]" src="./image/book-image4.png" alt="">
+            </div>
+            <div class="md:w-[31%] flex flex-col-reverse md:flex-row bg-[#f5f4f0]">
+                <div class="px-7 py-7">
+                    <p class="text-gray-400 font-semibold text-lg">$20.00 <span class="text-red-400">$8.00</span></p>
+                    <h1 class="text-3xl font-normal mt-4">Happy</h1>
+                    <p class="font-medium text-xl md:text-[17px] mt-4 text-gray-400">By John Nathan Muller</p>
+                </div>
+                <img class="md:w-[234px] w-full h-[320px]" src="./image/book-image5.png" alt="">
+            </div>
+            <div class="md:w-[31%] w-full flex flex-col-reverse md:flex-row bg-[#f5f4f0]">
+                <div class="px-7 py-7">
+                    <p class="text-red-400 font-semibold text-lg">$12.00</p>
+                    <h1 class="text-2xl font-normal mt-4">Milk & Honey</h1>
+                    <p class="font-medium text-xl md:text-[17px] mt-4 text-gray-400">By John Nathan Muller</p>
+                </div>
+                <img class="md:w-[234px] w-full h-[320px]" src="./image/book-image6.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- background Conatiner -->
+    <div id="testimonial" class="mt-28 opacity-30 bg-cover h-[400px] bg-[url('image/background2.jpg')]">
+        <div class="max-w-5xl py-20 flex m-auto justify-center">
+            <div class="text-center ">
+                <p class="text-white text-xl">TESTIMONIAL</p>
+                <h1 class="text-white text-5xl font-semibold">Kinds Words From Clients</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Card -->
+    <div class="max-w-6xl px-4 md:px-0 m-auto flex flex-col md:flex-row gap-7">
+        <div class="md:w-1/3 w-full relative -top-24">
+            <div class="h-10 absolute -top-4 left-5 flex w-10 bg-[#95adbe] rounded-full">
+                <img class="w-4 h-4 flex m-auto " src="./image/quote (1).png" alt="">
+            </div>
+            <div class="bg-white  mt-2  px-5 py-5 h-[220px]"
+                style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus at, dicta quae odio quia
+                    illum nobis aspernatur.</p>
+                <div class="flex mt-5 items-center">
+                    <img class="w-20 h-20 rounded-full" src="./image/profile-img.png" alt="">
+                    <div class="mx-7">
+                        <h1 class="font-medium text-xl">Roger Scott</h1>
+                        <p class="text-gray-500 font-medium mt-1">Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md:w-1/3 w-full relative -top-24">
+            <div class="h-10 absolute -top-4 left-5 flex w-10 bg-[#95adbe] rounded-full">
+                <img class="w-4 h-4 flex m-auto " src="./image/quote (1).png" alt="">
+            </div>
+            <div class="bg-white  mt-2  px-5 py-5 h-[220px]"
+                style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima harum aut dolor voluptatibus impedit
+                    temporibus sed.</p>
+                <div class="flex mt-5 items-center">
+                    <img class="w-20 h-20 rounded-full" src="./image/profile-img2.png" alt="">
+                    <div class="mx-7">
+                        <h1 class="font-medium text-xl">Roger Scott</h1>
+                        <p class="text-gray-500 font-medium mt-1">Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md:w-1/3 w-full relative -top-24">
+            <div class="h-10 absolute -top-4 left-5 flex w-10 bg-[#95adbe] rounded-full">
+                <img class="w-4 h-4 flex m-auto " src="./image/quote (1).png" alt="">
+            </div>
+            <div class="bg-white mt-2   px-5 py-5 h-[220px]"
+                style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam accusamus animi nihil id
+                    unde placeat.</p>
+                <div class="flex mt-5 items-center">
+                    <img class="w-20 h-20 rounded-full" src="./image/profile-img3.png" alt="">
+                    <div class="mx-7">
+                        <h1 class="font-medium text-xl">Roger Scott</h1>
+                        <p class="text-gray-500 font-medium mt-1">Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Recent Blog -->
+    <div id="blog">
+        <div class="max-w-6xl m-auto text-center">
+            <p class="text-red-400 font-normal">BLOG</p>
+            <h1 class="text-5xl font-medium text-gray-600 mt-2">Recent Blog</h1>
+        </div>
+        <div class="max-w-6xl px-4 mt-16 gap-7 m-auto flex flex-col md:flex-row">
+            <div class="md:w-1/3 w-full  relative">
+                <img class="w-full h-60" src="./image/card-img.png" alt="">
+                <div class="bg-[#f5f4f0] absolute m-auto left-1/2 -translate-x-1/2 top-[188px]  w-24 h-24 rounded-full">
+                    <div class="flex flex-col py-2 justify-center  text-center">
+                        <span class="text-[#95adbe] font-medium text-3xl">02</span>
+                        <span class="font-semibold">MAY</span>
+                        <span class="text-gray-400 text-xs tracking-[2px]">2020</span>
+                    </div>
+                </div>
+                <div class="mt-14 text-center px-8">
+                    <h1 class="text-xl  font-medium">New Freinds With Books</h1>
+                    <p class="mt-5  text-gray-500 font-medium">A small river named Duben flows by their place and
+                        supplies it with the necessary regelialia.</p>
+                </div>
+            </div>
+            <div class="md:w-1/3 w-full relative">
+                <img class="w-full h-60" src="./image/card-img2.png" alt="">
+                <div class="bg-[#f5f4f0] absolute m-auto left-1/2 -translate-x-1/2 top-48  w-24 h-24 rounded-full">
+                    <div class="flex flex-col py-2 justify-center  text-center">
+                        <span class="text-[#95adbe] font-medium text-3xl">02</span>
+                        <span class="font-semibold">MAY</span>
+                        <span class="text-gray-400 text-xs tracking-[2px]">2020</span>
+                    </div>
+                </div>
+                <div class="mt-14 text-center px-8">
+                    <h1 class="text-xl  font-medium">New Freinds With Books</h1>
+                    <p class="mt-5  text-gray-500 font-medium">A small river named Duben flows by their place and
+                        supplies it with the necessary regelialia.</p>
+                </div>
+
+            </div>
+            <div class="md:w-1/3 w-full relative">
+                <img class="w-full h-60" src="./image/card-img3.png" alt="">
+                <div class="bg-[#f5f4f0] absolute m-auto left-1/2 -translate-x-1/2 top-48  w-24 h-24 rounded-full">
+                    <div class="flex flex-col py-2 justify-center  text-center">
+                        <span class="text-[#95adbe] font-medium text-3xl">02</span>
+                        <span class="font-semibold">MAY</span>
+                        <span class="text-gray-400 text-xs tracking-[2px]">2020</span>
+                    </div>
+                </div>
+                <div class="mt-14 text-center px-8">
+                    <h1 class="text-xl  font-medium">New Freinds With Books</h1>
+                    <p class="mt-5  text-gray-500 font-medium">A small river named Duben flows by their place and
+                        supplies it with the necessary regelialia.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="bg-[#1a1a1a] mt-28">
+        <div class="max-w-6xl m-auto flex flex-col md:flex-row py-20">
+            <div class="md:w-1/4 w-full px-5">
+                <h1 class="text-white font-medium md:text-xl text-2xl">Connect</h1>
+                <p class="md:text-gray-400 text-lg md:text-[14px] text-gray-200 mt-6 font-medium">Far far away,behind
+                    the word mountains, far from the countries.</p>
+                <div class="flex md:gap-3 gap-5 mt-5">
+                    <div class="w-12 h-12 flex rounded-full bg-[#95adbe]">
+                        <img class="w-5 h-5 m-auto" src="./image/twitter-footer.png" alt="">
+                    </div>
+                    <div class="w-12 h-12 flex rounded-full bg-[#95adbe]">
+                        <img class="w-5 h-5 m-auto" src="./image/facebook-footer.png" alt="">
+                    </div>
+                    <div class="w-12 h-12 flex rounded-full bg-[#95adbe]">
+                        <img class="w-5 h-5 m-auto" src="./image/instagram-footer.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/4 w-full md:mt-0 mt-12 px-5">
+                <h1 class="text-white font-medium md:text-xl text-2xl">Extra Links</h1>
+                <ul class="text-white mt-5 md:text-[15px] text-xl font-medium ">
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Affiliate Program</li>
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Business Services</li>
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Education Services</li>
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Gift Card</li>
+                </ul>
+            </div>
+            <div class="md:w-1/4 w-full mt-8 md:mt-0 px-5">
+                <h1 class="text-white font-medium md:text-xl text-2xl">Legal</h1>
+                <ul class="text-white mt-5 font-medium text-xl md:text-[15px]">
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Join us</li>
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Blog</li>
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Privacy & Policy</li>
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Term & Condition</li>
+                </ul>
+            </div>
+            <div class="md:w-1/4 w-full mt-8 md:mt-0 px-5">
+                <h1 class="text-white font-medium text-2xl">Company</h1>
+                <ul class="text-white mt-5 font-medium text-xl md:text-[15px]">
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;About Us</li>
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Blog</li>
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Contact</li>
+                    <li class="mt-2 text-gray-400"><span
+                            class="text-white md:text-xl text-2xl font-bold">></span>&nbsp;Careers</li>
+                </ul>
+            </div>
+            <div class="md:w-1/4 w-full mt-8 md:mt-0 px-5">
+                <h1 class="text-white font-medium md:text-xl text-2xl">Have a Ouestion?</h1>
+                <div class="flex mt-8">
+                    <img class="md:w-5 md:h-5  w-7 h-7" src="./image/map.png" alt="">
+                    <p class="text-gray-400 flex -mt-1 text-xl md:text-[12px] mx-4 font-medium">203 Fake St.Mountain
+                        View,San Francisco, California, USA</p>
+                </div>
+                <div class="flex mt-3">
+                    <img class="md:w-5 md:h-5 w-7 h-7" src="./image/telephone-handle-silhouette.png" alt="">
+                    <p class="text-white text-xl md:text-[15px] mx-4 font-medium">+2&nbsp;392&nbsp;3929&nbsp;210</p>
+                </div>
+                <div class="flex mt-4">
+                    <img class="md:w-5 md:h-5 w-7 h-7" src="./image/paper-plane.png" alt="">
+                    <p class="text-white text-xl md:text-[15px] mx-4 font-medium">info@yourdomain.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main-Footer -->
+    <div class="bg-[#000000]">
+        <div class="max-w-6xl  m-auto px-4 md:px-0 py-12">
+            <div class="flex ">
+                <p class="font-normal" style="color: rgba(255, 255, 255, .5);">Copyright &#169;2024 All right reserved|
+                    This template is made with
+                    <img class="w-4 h-4 inline-block" src="./image/heart (1).png" alt=""> by <a
+                        class="text-white  font-medium" href="http://">&nbsp;Colorlib.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function openNav() {
+        const myPanel = document.getElementById("mySidepanel");
+        if (myPanel.style.height === "0px") {
+            myPanel.style.height = "440px";
+        } else {
+            myPanel.style.height = "0px";
+        }
+    }
+
+    const myPanel = document.querySelectorAll(".sidepanel a");
+    myPanel.forEach((item) => {
+        item.addEventListener("click", () => {
+            document.getElementById("mySidepanel").style.height = "0px";
+        });
+    });
+
+</script>
+
+</html>
